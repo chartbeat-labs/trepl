@@ -58,5 +58,5 @@ Trepl also ships with rack and tier aware check functions:
 Authors
 ----
 
-- Wes Chow
-- Matt Krukowski
+- [Wes Chow](https://github.com/wesc)
+- [Matt Krukowski](https://github.com/krukowski)
