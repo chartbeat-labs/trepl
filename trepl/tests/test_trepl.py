@@ -9,7 +9,7 @@ from trepl import checkers
 class TreplTest(unittest.TestCase):
     def _test(self, N, R, S):
         copysets = build_copysets(
-            range(N),
+            list(range(N)),
             R,
             S,
         )
@@ -23,7 +23,7 @@ class TreplTest(unittest.TestCase):
     def test_simple(self):
         max_N = 20
         for N in range(3, max_N + 1):
-            print "testing N=%d out of %d" % (N, max_N)
+            print("testing N=%d out of %d" % (N, max_N))
             for R in range(2, N + 1):
                 for S in range(1, N):
                     self._test(N, R, S)
@@ -61,7 +61,7 @@ class TreplTest(unittest.TestCase):
             for n in s:
                 nodes[n] |= set(s) - set([n])
 
-        r = {node: len(scatter_set) for node, scatter_set in nodes.iteritems()}
+        r = {node: len(scatter_set) for node, scatter_set in nodes.items()}
         return r
 
     def test_rack_checker(self):
@@ -75,7 +75,7 @@ class TreplTest(unittest.TestCase):
                     'H': 2,
                     'I': 2}
         copysets = build_copysets(
-            rack_map.keys(), 3, 2,
+            list(rack_map.keys()), 3, 2,
             checkers.rack(rack_map),
         )
 
@@ -114,7 +114,7 @@ class TreplTest(unittest.TestCase):
                     'F:0': 2,
                     'F:1': 2}
         copysets = build_copysets(
-            rack_map.keys(), 3, 4,
+            list(rack_map.keys()), 3, 4,
             checkers.composed(
                 checkers.rack(machine_map),
                 checkers.rack(

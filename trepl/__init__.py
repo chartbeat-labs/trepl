@@ -58,7 +58,7 @@ def build_copysets(nodes, R, S, checker=None, copysets=[]):
                 for n in s:
                     scatter_sets[n] |= s - set([n])
 
-            scatter_widths.update({k: len(v) for k, v in scatter_sets.iteritems()})
+            scatter_widths.update({k: len(v) for k, v in scatter_sets.items()})
 
         if not modified:
             # We failed to change anything in this pass, that means satisfying

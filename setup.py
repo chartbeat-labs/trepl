@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='trepl',
-    version='0.1',
+    version='1.0',
     packages=['trepl'],
     author="Wes Chow",
     author_email="wes@chartbeat.com",

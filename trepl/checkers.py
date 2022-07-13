@@ -60,8 +60,8 @@ def rack(rack_map, spread=None, R=None, allow_greater=False):
             try:
                 r = rack_map[node]
             except KeyError:
-                print "ERROR: no rack mapping for node '%s'" % node
-                print
+                print("ERROR: no rack mapping for node '%s'" % node)
+                print()
                 raise
             racks.add(r)
 
